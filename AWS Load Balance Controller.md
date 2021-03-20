@@ -36,7 +36,7 @@ eksctl create cluster -f  eksgo04-cluster.yaml
 
 ## 3.Set parameters and get info
 ```
-export CLUSTER_NAME=eksgo05
+export CLUSTER_NAME=eksgo04
 export AWS_REGION=cn-northwest-1
 ```
 
@@ -271,7 +271,7 @@ kubectl logs -n kube-system deployment.apps/aws-load-balancer-controller
 ```
 If the service account doesn’t get IAM role, you can
 ```
-[ec2-user@ip-172-31-1-111 ekslab]$ kubectl annotate serviceaccount aws-load-balancer-controller -n kube-system eks.amazonaws.com/role-arn=arn:aws-cn:iam::<your_account_id>:role/eksctl-eksgo05-addon-iamserviceaccount-kube-Role1-1JN8QIS4R9C3
+[ec2-user@ip-172-31-1-111 ekslab]$ kubectl annotate serviceaccount aws-load-balancer-controller -n kube-system eks.amazonaws.com/role-arn=arn:aws-cn:iam::<your_account_id>:role/eksctl-eksgo04-addon-iamserviceaccount-kube-Role1-1JN8QIS4R9C3
 serviceaccount/aws-load-balancer-controller annotated
 ```
 ```
@@ -280,7 +280,7 @@ Name:                aws-load-balancer-controller
 Namespace:           kube-system
 Labels:              app.kubernetes.io/component=controller
                      app.kubernetes.io/name=aws-load-balancer-controller
-Annotations:         eks.amazonaws.com/role-arn: arn:aws-cn:iam::<your_account_id>:role/eksctl-eksgo05-addon-iamserviceaccount-kube-Role1-1JN8QIS4R9C3
+Annotations:         eks.amazonaws.com/role-arn: arn:aws-cn:iam::<your_account_id>:role/eksctl-eksgo04-addon-iamserviceaccount-kube-Role1-1JN8QIS4R9C3
 
 Image pull secrets:  <none>
 Mountable secrets:   aws-load-balancer-controller-token-gxfqg
