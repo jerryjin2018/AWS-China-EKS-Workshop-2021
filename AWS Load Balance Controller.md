@@ -118,7 +118,7 @@ aws eks describe-cluster --name ${CLUSTER_NAME} --query "cluster.identity.oidc.i
 Example output
 https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E
 
-List the **IAM OIDC ****identity**** providers **in your account.
+List the IAM OIDC identity providers **in your account.
 
 ```
 aws iam list-open-id-connect-providers | grep $(aws eks describe-cluster --name ${CLUSTER_NAME} --query "cluster.identity.oidc.issuer" --output text | awk -F/ '{print $NF}')
