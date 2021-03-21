@@ -118,7 +118,7 @@ aws eks describe-cluster --name ${CLUSTER_NAME} --query "cluster.identity.oidc.i
 Example output
 https://oidc.eks.us-west-2.amazonaws.com/id/EXAMPLED539D4633E53DE1B716D3041E
 
-List the IAM OIDC identity providers **in your account.
+List the IAM OIDC identity providers in your account.
 
 ```
 aws iam list-open-id-connect-providers | grep $(aws eks describe-cluster --name ${CLUSTER_NAME} --query "cluster.identity.oidc.issuer" --output text | awk -F/ '{print $NF}')
@@ -147,7 +147,7 @@ Check IAM OIDC identity provider again
 
 ```
 [ec2-user@ip-172-31-1-111 ~]$ aws iam list-open-id-connect-providers | grep $(aws eks describe-cluster --name ${CLUSTER_NAME} --query "cluster.identity.oidc.issuer" --output text | awk -F/ '{print $NF}')
-            "Arn": "arn:aws-cn:iam::659702723394:oidc-provider/oidc.eks.cn-northwest-1.amazonaws.com.cn/id/EB8440E65FAFC194F7021319931A59AD"
+            "Arn": "arn:aws-cn:iam::111122223333:oidc-provider/oidc.eks.cn-northwest-1.amazonaws.com.cn/id/EB8440E65FAFC194F7021319931A59AD"
 ```
 
 ## 5.Create an IAM policy for the service account using the correct permissions 
@@ -192,7 +192,7 @@ eksctl create iamserviceaccount \
 2021-03-19 11:41:16 [ℹ]  eksctl version 0.40.0
 2021-03-19 11:41:16 [ℹ]  using region cn-northwest-1
 NAMESPACE      NAME                            ROLE ARN
-kube-system    aws-load-balancer-controller    arn:aws-cn:iam::659702723394:role/eksctl-eksgo04-addon-iamserviceaccount-kube-Role1-ZKDAVDJ024NV
+kube-system    aws-load-balancer-controller    arn:aws-cn:iam::111122223333:role/eksctl-eksgo04-addon-iamserviceaccount-kube-Role1-ZKDAVDJ024NV
 ```
 
 ```
