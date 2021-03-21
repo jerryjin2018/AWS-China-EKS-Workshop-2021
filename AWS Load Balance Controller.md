@@ -233,7 +233,6 @@ sed -i '/- --ingress-class=alb/ i\            - --enable-shield=fals
 检查修改好的yaml
 ```
 [ec2-user@ip-172-31-1-111 ekslab]$ more v2_1_3_full.yaml  | grep -i Cluster-Name -A 5
-
             - --cluster-name=eksgo04
             - --enable-shield=false
             - --enable-waf=false
