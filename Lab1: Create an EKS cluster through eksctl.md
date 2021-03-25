@@ -90,13 +90,13 @@ sudo yum install -y jq
 export AWS_REGION=cn-northwest-1
 export AWS_DEFAULT_REGION=cn-northwest-1
 # CLUSTER_NAME 集群名称
-# 替换ekswork_yourname为适合值，比如eksworkjerry
-export CLUSTER_NAME=ekswork_yourname
-# 替换ng-ekswork_yourname为适合值，比如ng-eksworkjerry
-export NODEGROUP_NAME=ng-ekswork_yourname
+# 替换ekswork-yourname为适合值，比如eksworkjerry
+export CLUSTER_NAME=ekswork-yourname
+# 替换ng-ekswork-yourname为适合值，比如ng-eksworkjerry
+export NODEGROUP_NAME=ng-ekswork-yourname
 export INSTANCE_TYPE=t3.medium
-# 替换your_key为你的key的名称
-export AWS_KEY=your_key
+# 替换your-key为你的key的名称
+export AWS_KEY=your-key
 # 替换1.18为你需要的版本
 export VERSION=1.18
 ```
@@ -117,7 +117,7 @@ metadata:
   version: "1.19"
 
 managedNodeGroups:
-  - name: ng-ekstest01-01
+  - name: ng-eksworkjerry-01
     instanceType: t3.medium
     instanceName: ng-eksworkjerry
     desiredCapacity: 3
