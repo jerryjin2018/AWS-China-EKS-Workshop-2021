@@ -140,5 +140,5 @@ Create eks cluster through follow single command line
 eksctl create cluster -f eksworkjerry.yaml
 ```
 
-#### 2) There are several yaml examples for creating an EKS cluster under different scenarios
+#### 3) There are several yaml examples for creating an EKS cluster under different scenarios
 [https://github.com/weaveworks/eksctl/tree/main/examples](url)
