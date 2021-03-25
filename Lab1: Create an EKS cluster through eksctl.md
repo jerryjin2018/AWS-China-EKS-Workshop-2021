@@ -96,7 +96,7 @@ export CLUSTER_NAME=ekswork-yourname
 export NODEGROUP_NAME=ng-ekswork-yourname
 export INSTANCE_TYPE=t3.medium
 # 替换your-key为你的key的名称
-export AWS_KEY=your-key
+export AWS_KEY=your-key-pair
 # 替换1.18为你需要的版本
 export VERSION=1.18
 ```
@@ -125,7 +125,7 @@ managedNodeGroups:
     maxSize: 4 
     volumeSize: 100
     ssh:
-      publicKeyName: key-for-virginia
+      publicKeyName: <your-key-pair>
       allow: true
       enableSsm: true 
     iam:
