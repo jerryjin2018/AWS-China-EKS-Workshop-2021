@@ -1,4 +1,6 @@
+## Lab4: AWS Load Balance Controller
 ## !Tips, all commands here are tested on AMZN Linux 2
+
 ## 1.Prepare EKS cluster yaml file - eksgo04-cluster.yaml
 
 ```
