@@ -79,8 +79,13 @@ Official link for download:
 sudo yum install -y jq
 ``` 
 
+####  7)Create an SSH key pair,replace your-key-name to what you like, such as: jerrykey 
+``` 
+aws ec2 create-key-pair --key-name your-key-name --query
+'KeyMaterial' --output text > your-key-name.pem  
 
-
+chmod 400 your-key-name.pem
+``` 
 
 ##  2. Create EKS cluster on AWS China region through eksctl, we choose Ningxia region here. You have two ways to create the EKS cluster, one is single command line, the other is with yaml file 
 #### 1) one is single command line
