@@ -101,9 +101,9 @@ export CLUSTER_NAME=ekswork-yourname
 export NODEGROUP_NAME=ng-ekswork-yourname
 export INSTANCE_TYPE=t3.medium
 # 替换your-key为你的key的名称
-export AWS_KEY=your-key-pair
-# 替换1.18为你需要的版本
-export VERSION=1.18
+export AWS_KEY=your-key-name
+# 替换1.19为你需要的版本
+export VERSION=1.19
 ```
 Create eks cluster through follow single command line
 ```
@@ -130,7 +130,7 @@ managedNodeGroups:
     maxSize: 4 
     volumeSize: 100
     ssh:
-      publicKeyName: <your-key-pair>
+      publicKeyName: <your-key-name>
       allow: true
       enableSsm: true 
     iam:
