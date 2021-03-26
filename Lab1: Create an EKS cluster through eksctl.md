@@ -81,8 +81,7 @@ sudo yum install -y jq
 
 ####  7)Create an SSH key pair,replace your-key-name to what you like, such as: jerrykey 
 ``` 
-aws ec2 create-key-pair --key-name your-key-name --query
-'KeyMaterial' --output text > your-key-name.pem  
+aws ec2 create-key-pair --key-name your-key-name --query 'KeyMaterial' --output text > your-key-name.pem  
 
 chmod 400 your-key-name.pem
 ``` 
