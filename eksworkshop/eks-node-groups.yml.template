@@ -1,0 +1,42 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata:
+    name: $CLUSTER_NAME
+    region: $AWS_REGION
+nodeGroups:
+    - name: dev-2vcpu-4gb-spot
+      minSize: 1
+      maxSize: 3
+      instancesDistribution:
+        instanceTypes: ["t3.medium", "t3a.medium", "t2.medium","c5.large","c5d.large"] # （1）一个节点组里面的实例的 vCPU 和 Memory 数量必须一致
+        onDemandBaseCapacity: 0
+        onDemandPercentageAboveBaseCapacity: 0 # （2）表明该节点组里面仅仅只有 竞价实例
+        spotInstancePools: 4 #（3）表明在 4 个竞价池里面兼顾多样性且选择最低价
+      labels:
+        lifecycle: Ec2Spot  # （4）用 lifecycle 标签，标注竞价实例，后续可以利用  affinities 和  nodeSlectors 功能
+        intent: apps #（5） 额外的标签用来区分不同的应用，比如本实验里，apps 是部署在竞价实例上，control apps 部署在按需上
+      taints:
+        spotInstance: "true:PreferNoSchedule" #（6）相对于 NoSchedule 的一个软限制，系统会尽量将不能容忍竞价实例的应用不部署在竞价实例上
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+          cloudWatch: true
+          albIngress: true
+    - name: dev-2vcpu-8gb-spot
+      minSize: 1
+      maxSize: 3
+      instancesDistribution:
+        instanceTypes: ["t2.large", "m4.large", "m5a.large","t3.large","t3a.large","m5.large","m5d.large"] 
+        onDemandBaseCapacity: 0
+        onDemandPercentageAboveBaseCapacity: 0 # No On Demand EC2 instances
+        spotInstancePools: 4
+      labels:
+        lifecycle: Ec2Spot
+        intent: apps
+      taints:
+        spotInstance: "true:PreferNoSchedule"
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+          cloudWatch: true
+          albIngress: true
