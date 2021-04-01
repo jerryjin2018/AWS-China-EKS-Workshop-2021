@@ -1,4 +1,4 @@
- # EKS弹性扩展+Spot使用动手实践
+ # Lab3: EKS Elastic Extensions and Spot Hands-on Practice
 
 ## 前提：  
 
