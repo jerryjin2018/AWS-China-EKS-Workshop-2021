@@ -2,7 +2,7 @@
 #### !Tips, all commands here are tested on AMZN Linux 2
 
 #### If you don't have any AMAZ linux 2-based workstation for your lab, please create it via following link
-[http://sharewithotheropen.s3-website.cn-northwest-1.amazonaws.com.cn](url)
+[http://sharewithotheropen.s3-website.cn-northwest-1.amazonaws.com.cn](http://sharewithotheropen.s3-website.cn-northwest-1.amazonaws.com.cn)
 
 
 ## 1.Install needed tools on workstation: awscli v2, kubectl, eksctl, aws-iam-authenticator, kubectx and kubens
@@ -19,7 +19,7 @@ Check awscli version,
 aws --version
 ```
 If the version of awscli is older(v1), you can follow the official link below to update awscli v2:  
-[https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html#cliv2-linux-upgrade](url)  
+[https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html#cliv2-linux-upgrade](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html#cliv2-linux-upgrade)  
 
 configure credential file:
 ```
@@ -30,7 +30,7 @@ Default region name [cn-northwest-1]: 此处默认为宁夏区域
 Default output format [json]:  
 ```
 Official link for configure aws cli:  
-[https://docs.amazonaws.cn/en_us/cli/latest/userguide/cli-configure-files.html](url)
+[https://docs.amazonaws.cn/en_us/cli/latest/userguide/cli-configure-files.html](https://docs.amazonaws.cn/en_us/cli/latest/userguide/cli-configure-files.html)
 
 #### 2)Install kubectl(Kubernetes 1.19)
 ```
@@ -39,9 +39,9 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin
 ```
 Official link for install kubectl(aws):  
-[https://docs.amazonaws.cn/en_us/eks/latest/userguide/install-kubectl.html](url)  
+[https://docs.amazonaws.cn/en_us/eks/latest/userguide/install-kubectl.html](https://docs.amazonaws.cn/en_us/eks/latest/userguide/install-kubectl.html)  
 Official link for install kubectl(Kubernetes):  
-[https://kubernetes.io/docs/tasks/tools/install-kubectl/](url)
+[https://kubernetes.io/docs/tasks/tools/install-kubectl/](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 #### 3)Install eksctl
 ```
@@ -72,7 +72,7 @@ chmod +x ./kubens
 sudo mv ./kubens /usr/local/bin
 ```
 Official link for download:  
-[https://github.com/ahmetb/kubectx/releases](url)
+[https://github.com/ahmetb/kubectx/releases](https://github.com/ahmetb/kubectx/releases)
 
 ####  6)[optional] Install jq
 ``` 
@@ -145,4 +145,4 @@ eksctl create cluster -f eksworkjerry.yaml
 ```
 
 #### 3) There are several yaml examples for creating an EKS cluster under different scenarios
-[https://github.com/weaveworks/eksctl/tree/main/examples](url)
+[https://github.com/weaveworks/eksctl/tree/main/examples](https://github.com/weaveworks/eksctl/tree/main/examples)
