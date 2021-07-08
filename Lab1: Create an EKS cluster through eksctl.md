@@ -11,7 +11,7 @@
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
-complete -C '/usr/local/bin/aws_completer' aws; echo "complete -C '/usr/local/bin/aws_completer' aws" >> .bashrc
+complete -C '/usr/local/bin/aws_completer' aws; echo "complete -C '/usr/local/bin/aws_completer' aws" >> ~/.bashrc
 source ~/.bash_profile
 ```
 Check awscli version, 
@@ -49,6 +49,9 @@ curl -OL "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$
 #curl -OL https://sharewithotheropen.s3.cn-northwest-1.amazonaws.com.cn/eksctl_Linux_amd64.tar.gz
 tar xvf eksctl_*_amd64.tar.gz
 sudo mv ./eksctl /usr/local/bin
+
+. <(eksctl completion bash); echo ". <(eksctl completion bash)" >> ~/.bashrc
+source ~/.bash_profile
 ```
 
 #### 4)Install aws-iam-authenticator
