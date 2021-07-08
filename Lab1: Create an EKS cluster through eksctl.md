@@ -37,6 +37,9 @@ Official link for configure aws cli:
 curl -o kubectl https://amazon-eks.s3.cn-north-1.amazonaws.com.cn/1.19.6/2021-01-05/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin
+
+source <(kubectl completion bash); echo 'source <(kubectl completion bash)' >> ~/.bashrc
+source ~/.bash_profile
 ```
 Official link for install kubectl(aws):  
 [https://docs.amazonaws.cn/en_us/eks/latest/userguide/install-kubectl.html](https://docs.amazonaws.cn/en_us/eks/latest/userguide/install-kubectl.html)  
