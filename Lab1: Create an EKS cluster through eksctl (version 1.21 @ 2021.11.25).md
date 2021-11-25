@@ -120,7 +120,7 @@ Example:
 -r--------  1 ec2-user ec2-user      1679 Nov 25 14:20 jerrykey.pem
 ```  
 
-##  2. Create EKS cluster on AWS China region through eksctl, we choose Ningxia region here. You have two ways to create the EKS cluster, one is single command line, the other is with yaml file 
+##  2. Create EKS cluster on AWS China region through eksctl, we choose Ningxia region here. You have three ways to create the EKS cluster, one is single command line, the other is with yaml file 
 #### 1) one is single command line
 ```
 # 环境变量
