@@ -107,7 +107,7 @@ Set every subnets in your VPC for EKS cluster to have tag
 ```
 for NAME in $(aws eks describe-cluster --name ${CLUSTER_NAME} | jq .cluster.resourcesVpcConfig.subnetIds[])
 do
-  eval aws ec2 create-tags --resources ${NAME} --tags Key="kubernetes.io/cluster/${CLUSTER_NAME}",Value=shared
+ eval aws ec2 create-tags --resources ${NAME} --tags Key="kubernetes.io/cluster/${CLUSTER_NAME}",Value=shared
 done
 ```
 
