@@ -1,5 +1,6 @@
 ## Lab2: AWS Load Balance Controller and Ingress
-#### !Tips, all commands here are tested on AMZN Linux 2
+#### !Tips, all commands here are tested on AMZN Linux 2   
+#### It has been test on EKS 1.19 and 1.21
 
 ## 1.Prepare EKS cluster yaml file - eksgo04-cluster.yaml
 
