@@ -159,7 +159,8 @@ Check IAM OIDC identity provider again
 ```
 curl -OL https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.1.3/docs/install/iam_policy_cn.json
 ```
-下载cert-manager yaml file
+下载cert-manager yaml file   
+cert-manager官方guide: https://cert-manager.io/docs/installation/
 ```
 curl -OL https://github.com/jetstack/cert-manager/releases/download/v1.0.2/cert-manager.yaml
 ```
@@ -293,3 +294,4 @@ Events:              <none>
 Reference:  
 https://docs.amazonaws.cn/eks/latest/userguide/aws-load-balancer-controller.html  
 https://github.com/kubernetes-sigs/aws-load-balancer-controller
+https://cert-manager.io/docs/installation/
