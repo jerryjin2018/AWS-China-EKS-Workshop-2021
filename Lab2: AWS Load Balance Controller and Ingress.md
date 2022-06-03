@@ -22,7 +22,7 @@ managedNodeGroups:
     maxSize: 8
     volumeSize: 100
     ssh:
-      publicKeyName: key-ningxia-new
+      publicKeyName: key-****-new
       allow: true
       enableSsm: true
     iam:
